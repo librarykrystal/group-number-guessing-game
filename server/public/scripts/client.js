@@ -42,10 +42,22 @@ function getResult(){
   })
 }
 
-appendToDom(){
+function appendToDom(array) {
+  console.log('f appendToDom TEST');
+  // $("#most-recent").empty();
   
+  $("#most-recent").append(guesses);
+
+  $("#history").empty();
+  for (let object of array) {
+    $("#history").append(`
+    <li>${object.Allie} ${object.David} ${object.Krystal}</li>
+    `);
+  }
 }
 
 function restartIt(){
-    
+  
 }
+
+
